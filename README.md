@@ -1,6 +1,6 @@
 # HiveBridge
 
-## Democratizing Collaborative AI in Healthcare**
+## Democratizing Collaborative AI in Healthcare
 
 HiveBridge is an open-source platform designed to facilitate the development and deployment of AI models in healthcare settings. By leveraging federated learning, HiveBridge enables multiple institutions to collaboratively train models without sharing sensitive data, ensuring privacy and compliance with data protection regulations.
 
