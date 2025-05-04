@@ -1,10 +1,8 @@
 # HiveBridge
 
-**Democratizing Collaborative AI in Healthcare**
+## Democratizing Collaborative AI in Healthcare**
 
 HiveBridge is an open-source platform designed to facilitate the development and deployment of AI models in healthcare settings. By leveraging federated learning, HiveBridge enables multiple institutions to collaboratively train models without sharing sensitive data, ensuring privacy and compliance with data protection regulations.
-
----
 
 ## 🚀 Features
 
@@ -13,8 +11,6 @@ HiveBridge is an open-source platform designed to facilitate the development and
 * **Low-Code Workflow Builder**: Simplify the creation of machine learning pipelines with a user-friendly interface.
 * **Scalable Architecture**: Built with modern technologies to ensure scalability and maintainability.
 
----
-
 ## 🏗️ Project Structure
 
 The HiveBridge project is organized as follows:
@@ -22,12 +18,10 @@ The HiveBridge project is organized as follows:
 ```
 HiveBridge/
 ├── src/                    # Core application source code
-│   ├── controllers/        # Route controllers for handling requests
-│   ├── models/             # Database models and schemas
-│   ├── routes/             # API route definitions
-│   ├── services/           # Business logic and service layer
-│   ├── utils/              # Utility functions and helpers
-│   └── index.ts            # Entry point of the application
+│   ├── app                 # Main application logic and features
+│   ├── config              # Environment and configuration files
+│   ├── server              # Entry point and server setup
+│   └── index.ts            # Root bootstrap file
 ├── spec/                   # Test specifications and mocks
 ├── types/                  # TypeScript type definitions
 ├── .env.test               # Environment variables for testing
@@ -43,8 +37,6 @@ HiveBridge/
 ├── package.json            # NPM package configuration
 └── tsconfig.json           # TypeScript compiler configuration
 ```
-
----
 
 ## 🧰 Developer Stack & Tooling
 
@@ -70,8 +62,6 @@ HiveBridge is built with modern, developer-friendly tools to support efficient, 
 
 * **Node.js Version Management with `nvm`**
   `.nvmrc` ensures consistent Node.js versions across development environments.
-
----
 
 ## 🛠️ Getting Started
 
@@ -107,8 +97,6 @@ HiveBridge is built with modern, developer-friendly tools to support efficient, 
    npm run dev
    ```
 
----
-
 ## 🧪 Running Tests
 
 HiveBridge uses Jest for testing. To run the test suite:
@@ -117,27 +105,19 @@ HiveBridge uses Jest for testing. To run the test suite:
 npm test
 ```
 
----
-
 ## 📄 Documentation
 
 * **Code Conventions**: Refer to `CODE_CONVENTIONS.md` for coding standards and best practices.
 * **API Documentation**: \[Coming Soon]
 * **Deployment Guide**: \[Coming Soon]
 
----
-
 ## 🤝 Contributing
 
 Contributions are welcome! Please fork the repository and submit a pull request for any enhancements or bug fixes. Ensure that your code adheres to the project's coding standards and includes appropriate tests.
 
----
-
 ## 📄 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
 
 ## 📬 Contact
 
