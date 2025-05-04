@@ -1,0 +1,51 @@
+{
+    "compilerOptions": {
+        "target": "ES2022",
+        "module": "ESNext",
+        "moduleResolution": "node",
+        "outDir": "./dist",
+        "rootDir": ".",
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "strict": true,
+        "skipLibCheck": true,
+        "resolveJsonModule": true,
+        "sourceMap": true,
+        "declaration": true,
+        "removeComments": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "strictFunctionTypes": true,
+        "strictPropertyInitialization": true,
+        "noImplicitThis": true,
+        "alwaysStrict": true,
+        "types": [
+            "jest",
+            "node"
+        ],
+        "baseUrl": ".",
+        "paths": {
+            "@src/*": [
+                "src/*"
+            ],
+            "@spec/*": [
+                "spec/*"
+            ],
+            "@test/*": [
+                "src/test/*"
+            ]
+        }
+    },
+    "include": [
+        "src/**/*",
+        "spec/**/*",
+        "test/**/*",
+        "types"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist",
+        "logs",
+        "coverage"
+    ]
+}

@@ -1,0 +1,55 @@
+{
+    "name": "hivebridge",
+    "version": "1.0.0",
+    "description": "A modern web application built with Parse Server and TypeScript",
+    "main": "dist/index.js",
+    "engines": {
+        "node": ">=22.0.0"
+    },
+    "scripts": {
+        "start": "node dist/index.js",
+        "dev": "nodemon --exec tsx src/index.ts",
+        "build": "tsc",
+        "test": "jest",
+        "test:watch": "jest --watch",
+        "lint": "eslint . --ext .ts",
+        "lint:fix": "eslint . --ext .ts --fix",
+        "format": "prettier --write \"src/**/*.ts\"",
+        "prepare": "husky install",
+        "setup": "nvm install && nvm use"
+    },
+    "keywords": [
+        "parse-server",
+        "typescript",
+        "nodejs",
+        "web-application"
+    ],
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "dotenv": "^16.5.0",
+        "dotenv-expand": "^12.0.2",
+        "express": "5.1.0",
+        "parse": "^6.1.1",
+        "parse-server": "8.2.0"
+    },
+    "devDependencies": {
+        "@types/express": "5.0.1",
+        "@types/jest": "^29.5.11",
+        "@types/node": "22.15.3",
+        "@types/parse": "^3.0.9",
+        "@typescript-eslint/eslint-plugin": "8.31.1",
+        "@typescript-eslint/parser": "8.31.1",
+        "eslint": "9.26.0",
+        "eslint-config-prettier": "10.1.2",
+        "eslint-plugin-prettier": "5.3.1",
+        "husky": "9.1.7",
+        "jest": "^29.7.0",
+        "nodemon": "^3.0.2",
+        "prettier": "^3.1.1",
+        "ts-jest": "^29.1.1",
+        "tsx": "4.19.4",
+        "typescript": "^5.3.3",
+        "tsconfig-paths": "^4.2.0"
+    }
+}
