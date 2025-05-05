@@ -107,7 +107,7 @@ npm test
 
 ## 📄 Documentation
 
-- **Code Conventions**: Refer to `CODE_CONVENTIONS.md` for coding standards and best practices.
+- **Code Conventions**: Refer to [`CODE_CONVENTIONS`](CODE_CONVENTIONS.md) for coding standards and best practices.
 - **API Documentation**: \[Coming Soon]
 - **Deployment Guide**: \[Coming Soon]
 
