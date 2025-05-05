@@ -1,38 +1,65 @@
-# Dependencies
+# -------------------------
+# ✅ Dependency directories
+# -------------------------
 node_modules/
-npm-debug.log
-yarn-debug.log
-yarn-error.log
 
-# Build output
+# -------------------------
+# ✅ Logs
+# -------------------------
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# -------------------------
+# ✅ Build artifacts
+# -------------------------
 dist/
 build/
 coverage/
 
-# Environment variables
+# -------------------------
+# ✅ Runtime environment variables
+# -------------------------
 .env
 .env.local
 .env.*.local
 
-# IDE and editor files
+# -------------------------
+# ✅ IDE/editor configurations
+# -------------------------
 .idea/
 .vscode/
+.DS_Store
 *.swp
 *.swo
-.DS_Store
 
-# Logs
-logs/
-*.log
-
-# Testing
-coverage/
-
-# TypeScript
+# -------------------------
+# ✅ TypeScript build info
+# -------------------------
 *.tsbuildinfo
 
-# Parse Server
-cloud/
-public/ 
+# -------------------------
+# ✅ Testing
+# -------------------------
+coverage/
 
+# -------------------------
+# ✅ Package manager lockfile (npm only — optional!)
+# -------------------------
 package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# If using Yarn or PNPM, keep `yarn.lock` or `pnpm-lock.yaml` instead.
+
+# -------------------------
+# ✅ ESLint cache
+# -------------------------
+.eslintcache
+
+# -------------------------
+# 📝 Prettier cache (optional)
+# -------------------------
+.prettiercache
