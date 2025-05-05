@@ -52,8 +52,6 @@ package-lock.json
 yarn.lock
 pnpm-lock.yaml
 
-# If using Yarn or PNPM, keep `yarn.lock` or `pnpm-lock.yaml` instead.
-
 # -------------------------
 # ✅ ESLint cache
 # -------------------------
