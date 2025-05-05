@@ -38,20 +38,20 @@ function buildMongoURI(): string {
     const pass = process.env.MONGO_PASS;
     const host = process.env.MONGO_HOST || '127.0.0.1';
     const port = process.env.MONGO_PORT || '27017';
-    const db = process.env.MONGO_DB_NAME || 'db_test';
+    const db = process.env.MONGO_DB_NAME || 'db_test_name';
     const replicaSet = process.env.MONGO_REPLICA_SET;
+    const authSource = process.env.MONGO_AUTH_SOURCE;
 
-    let credentials = '';
-    if (user && pass) {
-        credentials = `${encodeURIComponent(user)}:${encodeURIComponent(pass)}@`;
-    }
+    const credentials =
+        user && pass ? `${encodeURIComponent(user)}:${encodeURIComponent(pass)}@` : '';
 
-    let uri = `mongodb://${credentials}${host}:${port}/${db}`;
-    if (replicaSet) {
-        uri += `?replicaSet=${replicaSet}`;
-    }
+    const baseURI = `mongodb://${credentials}${host}:${port}/${db}`;
+    const queryParams: string[] = [];
 
-    return uri;
+    if (replicaSet) queryParams.push(`replicaSet=${replicaSet}`);
+    if (authSource) queryParams.push(`authSource=${authSource}`);
+
+    return queryParams.length > 0 ? `${baseURI}?${queryParams.join('&')}` : baseURI;
 }
 
 /**
