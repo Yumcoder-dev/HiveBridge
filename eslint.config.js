@@ -24,6 +24,10 @@ export default [
             },
             globals: {
                 jest: true, // Allow Jest global variables
+                process: 'readonly', // Allow use of process.env, etc.
+                __dirname: 'readonly', // Allow Node.js __dirname
+                module: 'readonly', // Allow Node.js module
+                require: 'readonly', // Allow Node.js require
             },
         },
         plugins: {
