@@ -28,6 +28,7 @@ export default [
                 __dirname: 'readonly', // Allow Node.js __dirname
                 module: 'readonly', // Allow Node.js module
                 require: 'readonly', // Allow Node.js require
+                console: 'readonly', // Allow console.log, etc.
             },
         },
         plugins: {
