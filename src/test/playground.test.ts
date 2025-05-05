@@ -1,6 +1,6 @@
 import Parse from 'parse/node';
-import { describe, expect, test } from '@jest/globals';
-import { initParseClient } from './jest.utils';
+import { describe, expect, test, beforeAll } from '@jest/globals';
+import { initParseClient } from './utils';
 
 describe('Test Server – Playground', () => {
     beforeAll(() => {
