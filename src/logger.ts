@@ -11,8 +11,12 @@ function format(message: string): string {
  * Unified logger object with level-specific methods.
  */
 export const logger = {
-    info: (msg: string) => console.info(format(msg)),
-    error: (msg: string) => console.error(format(msg)),
-    warn: (msg: string) => console.warn(format(msg)),
-    debug: (msg: string) => console.debug(format(msg)),
+    // eslint-disable-next-line no-console
+    info: (msg: string): void => console.info(format(msg)),
+    // eslint-disable-next-line no-console
+    error: (msg: string): void => console.error(format(msg)),
+    // eslint-disable-next-line no-console
+    warn: (msg: string): void => console.warn(format(msg)),
+    // eslint-disable-next-line no-console
+    debug: (msg: string): void => console.debug(format(msg)),
 };

@@ -12,15 +12,18 @@ export default async (): Promise<void> => {
         await new Promise<void>((resolve, reject) => {
             server.close((err?: Error) => {
                 if (err) {
+                    // eslint-disable-next-line no-console
                     console.error('[Jest Teardown] Error closing server:', err);
                     reject(err);
                 } else {
+                    // eslint-disable-next-line no-console
                     console.info('[Jest Teardown] Test server stopped.');
                     resolve();
                 }
             });
         });
     } else {
+        // eslint-disable-next-line no-console
         console.warn('[Jest Teardown] Server not running or already closed.');
     }
 };

@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+# Run tests
+npm test
+
+# Run lint-staged for staged file formatting and linting
+npx lint-staged
+
+# Run type checking without emitting files
+npx tsc --noEmit

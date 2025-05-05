@@ -1,113 +1,131 @@
 # Code Conventions
 
-## TypeScript Guidelines
+## 1. TypeScript Guidelines
 
-### Naming Conventions
+### 1.1. Naming Conventions
 
-- Use PascalCase for:
-  - Class names
-  - Interface names
-  - Type names
-  - Enum names
-  - Type parameters (generics)
+- **PascalCase** for:
 
-- Use camelCase for:
-  - Variables
-  - Functions
-  - Methods
-  - Properties
-  - Parameters
+    - Class names
+    - Interface names
+    - Type aliases
+    - Enum names
+    - Generic type parameters
 
-- Use UPPER_SNAKE_CASE for:
-  - Constants
-  - Enum values
+- **camelCase** for:
 
-### File Naming
+    - Variables
+    - Functions
+    - Methods
+    - Object properties
+    - Function parameters
 
-- Use PascalCase for:
-  - Component files
-  - Class files
-  - Interface files
-  - Type files
+- **UPPER_SNAKE_CASE** for:
 
-- Use camelCase for:
-  - Utility files
-  - Helper files
-  - Service files
+    - Constants
+    - Enum values
 
-### Type Definitions
+### 1.2. File Naming
 
-- Always use explicit types for function parameters and return values
-- Use interfaces for object shapes
-- Use type aliases for complex types
-- Avoid using `any` type
-- Use `unknown` instead of `any` when the type is truly unknown
+- **PascalCase** for:
 
-### Code Style
+    - Component files
+    - Class files
+    - Interface files
+    - Type definition files
 
-- Use 2 spaces for indentation
-- Use semicolons at the end of statements
-- Use single quotes for strings
-- Use trailing commas in multiline object and array literals
-- Use arrow functions for callbacks
-- Use async/await instead of Promise chains
-- Use template literals for string interpolation
+- **camelCase** for:
 
-### Comments
+    - Utility files
+    - Helper files
+    - Service files
 
-- Use JSDoc comments for public APIs
-- Use single-line comments for implementation details
-- Keep comments up-to-date with code changes
+### 1.3. Type Definitions
 
-### Testing
+- Always specify explicit types for function parameters and return types.
+- Use `interface` for object shape definitions.
+- Use `type` aliases for unions and more complex type expressions.
+- Avoid the `any` type; prefer `unknown` when a type is truly indeterminate.
+- Prefer `readonly` where immutability is required.
 
-- Test files should be named `*.test.ts` or `*.spec.ts`
-- Use descriptive test names
-- Follow the pattern: `describe('component', () => { it('should do something', () => {}) })`
-- Use meaningful assertions
+### 1.4. Code Style
 
-### Error Handling
+- Use **2 spaces** for indentation.
+- Always use **semicolons**.
+- Prefer **single quotes** for strings.
+- Include **trailing commas** in multiline arrays and object literals.
+- Use **arrow functions** for inline callbacks.
+- Favor **async/await** over Promise chaining.
+- Use **template literals** for string interpolation.
 
-- Use try/catch blocks for async operations
-- Throw Error objects with meaningful messages
-- Handle errors at the appropriate level
-- Use custom error classes when needed
+### 1.5. Comments
 
-### Imports and Exports
+- Use **JSDoc comments** for public APIs and exported functions.
+- Use **single-line comments** for implementation notes.
+- Keep all comments relevant and updated with code changes.
 
-- Use named imports and exports
-- Group imports by type:
-  1. External modules
-  2. Internal modules
-  3. Types
-- Use absolute imports for project modules
-- Avoid circular dependencies
+### 1.6. Testing
 
-### Parse Server Specific
+- Name test files as `*.test.ts` or `*.spec.ts`.
+- Write **descriptive** test case names.
+- Follow the pattern:
 
-- Use PascalCase for Parse classes
-- Use camelCase for Parse fields
-- Follow Parse naming conventions for Cloud Functions
-- Use proper typing for Parse queries and results
+    ```ts
+    describe('ComponentName', () => {
+        test('should perform expected behavior', () => {
+            // test implementation
+        });
+    });
+    ```
 
-## Git Commit Messages
+- Use **clear and meaningful assertions**.
 
-- Use present tense ("Add feature" not "Added feature")
-- Use imperative mood ("Move cursor to..." not "Moves cursor to...")
-- Limit the first line to 72 characters or less
-- Reference issues and pull requests liberally
-- Consider starting the commit message with an applicable emoji
+### 1.7. Error Handling
 
-## Documentation
+- Use `try/catch` blocks around async operations.
+- Always throw `Error` objects with descriptive messages.
+- Handle errors at the appropriate abstraction level.
+- Create and use custom error classes when applicable.
 
-- Keep README.md up-to-date
-- Document all public APIs
-- Include examples in documentation
-- Keep changelog updated
+### 1.8. Imports and Exports
 
-## Security
+- Prefer **named imports and exports**.
 
-- Never commit sensitive information
-- Use environment variables for configuration
-- Validate all user input
-- Follow security best practices for Parse Server 
+- Group imports in the following order:
+
+    1. External libraries
+    2. Internal modules
+    3. Type imports
+
+- Use **absolute imports** for project files.
+
+- Avoid circular dependencies through proper module structure.
+
+### 1.9. Parse Server Conventions
+
+- Use **PascalCase** for `Parse.Object` subclass names (class names).
+- Use **camelCase** for field names within `Parse.Object`.
+- Follow standard naming for **Cloud Functions** and Triggers.
+- Use strict typing for Parse queries, objects, and results.
+
+## 2. Git Commit Messages
+
+- Use the **present tense** (“Add feature”, not “Added feature”).
+- Use **imperative mood** (“Fix bug”, not “Fixes bug”).
+- Limit the **first line to 72 characters**.
+- Reference related issues or pull requests.
+- Optionally prefix with an emoji to indicate intent (e.g. ✨, 🐛, 📚).
+
+## 3. Documentation
+
+- Keep `README.md` current with usage and setup instructions.
+- Document all **public APIs** and modules.
+- Include **usage examples** where helpful.
+- Maintain a consistent and updated **changelog**.
+
+## 4. Security
+
+- Never commit secrets, API keys, or credentials.
+- Use **environment variables** for all configuration secrets.
+- Validate all **user input**, especially in API routes.
+- Follow **Parse Server security best practices** (e.g. ACLs, class-level permissions).

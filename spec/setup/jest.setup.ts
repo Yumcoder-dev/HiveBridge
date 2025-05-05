@@ -15,5 +15,6 @@ import { setTestServer } from './jest.utils';
 export default async (): Promise<void> => {
     const server = await startServer();
     setTestServer(server);
+    // eslint-disable-next-line no-console
     console.info('[Jest Setup] Test server started.');
 };

@@ -9,7 +9,7 @@ let httpServer: Server;
  *
  * @param server - The HTTP server instance to store
  */
-export const setTestServer = (server: Server) => {
+export const setTestServer = (server: Server): void => {
     httpServer = server;
 };
 
