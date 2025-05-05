@@ -4,8 +4,10 @@ import eslintPluginPrettier from 'eslint-plugin-prettier';
 import tseslint from '@typescript-eslint/eslint-plugin';
 // Import TypeScript parser so ESLint can parse .ts files
 import tsParser from '@typescript-eslint/parser';
+import js from '@eslint/js';
 
 export default [
+    js.configs.recommended,
     {
         // Globally ignore output, dependency, and log directories from linting
         ignores: ['coverage/**', 'dist/**', 'node_modules/**', 'logs/**'],
