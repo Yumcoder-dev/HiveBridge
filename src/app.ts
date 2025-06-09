@@ -1,6 +1,41 @@
 import express, { Express } from 'express';
 import { ParseServer } from 'parse-server';
+import ParseDashboard from 'parse-dashboard';
 import { config } from './config';
+
+/**
+ * Mounts the Parse Dashboard on the provided Express app.
+ *
+ * @param app The Express application instance
+ */
+export const mountParseDashboard = (app: Express): void => {
+    const dashboard = new ParseDashboard(
+        {
+            apps: [
+                {
+                    serverURL: config.serverURL,
+                    appId: config.appId,
+                    masterKey: config.masterKey,
+                    appName: config.appName,
+                    // primaryBackgroundColor: '#FFA500', // Orange
+                    // secondaryBackgroundColor: '#FF4500', // OrangeRed
+                },
+            ],
+            users: [
+                {
+                    user: 'admin',
+                    pass: 'admin123', // Replace with env in production
+                },
+            ],
+            trustProxy: 1,
+        },
+        {
+            allowInsecureHTTP: true, // Only for development
+        },
+    );
+
+    app.use(config.dashboardPath, dashboard);
+};
 
 /**
  * Creates and configures an Express application with an embedded Parse Server.
@@ -41,7 +76,10 @@ const createApp = async (): Promise<Express> => {
     await parseServer.start();
 
     // Mount the Parse Server API at the specified route
-    app.use('/parse', parseServer.app);
+    app.use(config.serverPath, parseServer.app);
+    if (config.dashboardPath) {
+        mountParseDashboard(app);
+    }
 
     return app;
 };

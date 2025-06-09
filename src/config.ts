@@ -60,10 +60,12 @@ function buildMongoURI(): string {
  */
 export const config = {
     appName: process.env.APP_NAME || 'AppName',
+    serverPath: process.env.SERVER_PATH || '/AppName',
     env: process.env.NODE_ENV || 'development',
     port: parseInt(process.env.SERVER_PORT || '1337', 10),
     appId: process.env.APP_ID || 'AppId',
     masterKey: process.env.MASTER_KEY || 'AppMasterKey',
-    serverURL: process.env.SERVER_URL || 'http://localhost:1337/parse',
+    serverURL: process.env.SERVER_URL || 'http://localhost:1337/AppName',
+    dashboardPath: process.env.DASHBOARD_PATH || '/master',
     mongoURI: buildMongoURI(),
 };
