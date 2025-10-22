@@ -39,7 +39,7 @@
         "dotenv": "^16.5.0",
         "dotenv-expand": "^12.0.2",
         "express": "5.1.0",
-        "parse": "^6.1.1",
+        "parse": "^7.0.1",
         "parse-server": "8.2.0"
     },
     "devDependencies": {
